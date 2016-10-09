@@ -24,22 +24,16 @@ body {
 .clock {
     display: inline-block;
     border-radius: 50%;
-    /*background: #fff url(clock.svg) no-repeat center;*/
-    background-size: 90%;
     height: 25em;
     position: relative;
     width: 25em;
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
-    -webkit-transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
-}
-
-.clock.show {
     opacity: 1;
     transition: all 2.5s cubic-bezier(0.12, 1.03, 0.34, 1);
+}
+
+.clock-bg {
+    background: #fff url(../svg/clock.svg) no-repeat center;
+    background-size: 90%;
 }
 
 .clock.simple:before {
@@ -58,41 +52,11 @@ body {
 .minutes-container,
 .hours-container,
 .seconds-container {
-    background-color: white;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0.5;
-}
-
-.extrude1,
-.extrude2,
-.extrude3 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.extrude1 {
-    transform: translateZ(2em);
-    -webkit-transform: translateZ(2em);
-    opacity: 0.5;
-}
-
-.extrude2 {
-    transform: translateZ(8em);
-    -webkit-transform: translateZ(8em);
-    opacity: 0.8;
-}
-
-.extrude3 {
-    transform: translateZ(16em);
-    -webkit-transform: translateZ(16em);
-    opacity: 1;
 }
 
 .hours {

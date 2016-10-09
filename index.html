@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="clock.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/clock.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/clocktrans.css"/>
     <title>clock simple</title>
 </head>
 <body>
@@ -12,19 +13,39 @@
         clock sample
     </span>
     <div class="clock-border">
-        <article class="clock simple show">
+        <article class="clock clock-bg simple">
+            <div class="hours-container">
+                <div class="hours"></div>
+            </div>
+            <div class="minutes-container">
+                <div class="minutes"></div>
+            </div>
+            <div class="seconds-container">
+                <div class="seconds"></div>
+            </div>
+        </article>
+    </div>
+
+</div>
+
+<div class="clock-container">
+    <span class="clock-title">
+        Click the clock :)
+    </span>
+    <div class="clock-border">
+        <article id="clockTrans" class="clock clock-bg clock-trans simple" onclick="trans();">
             <div class="extrude1">
-                <div class="hours-container">
+                <div class="hours-container hours-container-trans">
                     <div class="hours"></div>
                 </div>
             </div>
             <div class="extrude2">
-                <div class="minutes-container">
+                <div class="minutes-container minutes-container-trans">
                     <div class="minutes"></div>
                 </div>
             </div>
             <div class="extrude3">
-                <div class="seconds-container">
+                <div class="seconds-container seconds-container-trans">
                     <div class="seconds"></div>
                 </div>
             </div>
@@ -32,6 +53,35 @@
     </div>
 
 </div>
-<script src="clock.js"></script>
+<script src="static/js/clock.js"></script>
+<script>
+    function hasClass(obj, cls) {
+        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+    }
+
+    function addClass(obj, cls) {
+        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
+    }
+
+    function removeClass(obj, cls) {
+        if (hasClass(obj, cls)) {
+            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+            obj.className = obj.className.replace(reg, ' ');
+        }
+    }
+
+    function trans() {
+        var clockTrans = document.getElementById("clockTrans");
+        if (!clockTrans) {
+            return;
+        }
+
+        if (hasClass(clockTrans, "clock-trans")) {
+            removeClass(clockTrans, "clock-trans");
+        } else {
+            addClass(clockTrans, "clock-trans");
+        }
+    }
+</script>
 </body>
 </html>
