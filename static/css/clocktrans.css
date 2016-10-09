@@ -1,6 +1,6 @@
 .clock-trans {
-    -webkit-perspective: 1200px;
-    perspective: 1200px;
+    -webkit-perspective: 60em;
+    perspective: 60em;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
@@ -36,7 +36,7 @@
 }
 
 .extrude2 {
-    transform: translateZ(8em);
+    transform: translateZ(9em);
     -webkit-transform: translateZ(9em);
     opacity: 0.8;
 }
