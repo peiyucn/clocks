@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="clock.css"/>
-    <title>clocks</title>
+    <title>clock simple</title>
 </head>
 <body>
-<article class="clock simple">
-    <div class="hours-container">
-        <div class="hours"></div>
+
+<div class="clock-container">
+    <span class="clock-title">
+        clock sample
+    </span>
+    <div class="clock-border">
+        <article class="clock simple show">
+            <div class="extrude1">
+                <div class="hours-container">
+                    <div class="hours"></div>
+                </div>
+            </div>
+            <div class="extrude2">
+                <div class="minutes-container">
+                    <div class="minutes"></div>
+                </div>
+            </div>
+            <div class="extrude3">
+                <div class="seconds-container">
+                    <div class="seconds"></div>
+                </div>
+            </div>
+        </article>
     </div>
-    <div class="minutes-container">
-        <div class="minutes"></div>
-    </div>
-    <div class="seconds-container">
-        <div class="seconds"></div>
-    </div>
-</article>
+
+</div>
 <script src="clock.js"></script>
 </body>
 </html>

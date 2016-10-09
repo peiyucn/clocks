@@ -1,13 +1,47 @@
-.clock {
-    border-radius: 50%;
-    background: #fff url(clock.svg) no-repeat center;
-    background-size: 90%;
-    height: 50em;
-    position: relative;
-    width: 50em;
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.clock.simple:after {
+.clock-container {
+    margin: 3rem;
+    text-align: center;
+}
+
+.clock-title {
+    font-size: 2rem;
+}
+
+.clock-border {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 2rem;
+    border-radius: 5%;
+}
+
+.clock {
+    display: inline-block;
+    border-radius: 50%;
+    /*background: #fff url(clock.svg) no-repeat center;*/
+    background-size: 90%;
+    height: 25em;
+    position: relative;
+    width: 25em;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
+    -webkit-transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
+}
+
+.clock.show {
+    opacity: 1;
+    transition: all 2.5s cubic-bezier(0.12, 1.03, 0.34, 1);
+}
+
+.clock.simple:before {
     background: #000;
     border-radius: 50%;
     content: "";
@@ -23,11 +57,41 @@
 .minutes-container,
 .hours-container,
 .seconds-container {
+    background-color: white;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    opacity: 0.5;
+}
+
+.extrude1,
+.extrude2,
+.extrude3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.extrude1 {
+    transform: translateZ(2em);
+    -webkit-transform: translateZ(2em);
+    opacity: 0.5;
+}
+
+.extrude2 {
+    transform: translateZ(8em);
+    -webkit-transform: translateZ(8em);
+    opacity: 0.8;
+}
+
+.extrude3 {
+    transform: translateZ(16em);
+    -webkit-transform: translateZ(16em);
+    opacity: 1;
 }
 
 .hours {
@@ -51,7 +115,7 @@
 }
 
 .seconds {
-    background: #000;
+    background: #ff0000;
     height: 45%;
     left: 49.5%;
     position: absolute;
@@ -70,23 +134,27 @@
 .hours-container {
     animation: rotate 43200s infinite linear;
 }
+
 /*.minutes-container {*/
-    /*animation: rotate 3600s infinite linear;*/
+/*animation: rotate 3600s infinite linear;*/
 /*}*/
+
 /*.seconds-container {*/
-    /*animation: rotate 60s infinite linear;*/
+/*animation: rotate 60s infinite linear;*/
 /*}*/
 
 /*.minutes-container {*/
-    /*animation: rotate 3600s infinite steps(60);*/
+/*animation: rotate 3600s infinite steps(60);*/
 /*}*/
+
 /*.seconds-container {*/
-    /*animation: rotate 60s infinite steps(60);*/
+/*animation: rotate 60s infinite steps(60);*/
 /*}*/
 
 .minutes-container {
-    transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
+    transition: transform 0.3s cubic-bezier(.4, 2.08, .55, .44);
 }
+
 .seconds-container {
-    transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
+    transition: transform 0.2s cubic-bezier(.4, 2.08, .55, .44);
 }
