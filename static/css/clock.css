@@ -28,7 +28,7 @@ body {
     position: relative;
     width: 25em;
     opacity: 1;
-    transition: all 2.5s cubic-bezier(0.12, 1.03, 0.34, 1);
+    /*transition: all 2.5s cubic-bezier(0.12, 1.03, 0.34, 1);*/
 }
 
 .clock-bg {
