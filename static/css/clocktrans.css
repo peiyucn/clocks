@@ -7,11 +7,16 @@
     -webkit-transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
 }
 
+.clock-bg-trans {
+    background: #9c9c9c url(../svg/clock.svg) no-repeat center;
+    background-size: 90%;
+}
+
 .minutes-container-trans,
 .hours-container-trans,
 .seconds-container-trans {
     background-color: white;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .extrude1,
@@ -25,14 +30,14 @@
 }
 
 .extrude1 {
-    transform: translateZ(2em);
-    -webkit-transform: translateZ(2em);
+    transform: translateZ(3em);
+    -webkit-transform: translateZ(3em);
     opacity: 0.5;
 }
 
 .extrude2 {
     transform: translateZ(8em);
-    -webkit-transform: translateZ(8em);
+    -webkit-transform: translateZ(9em);
     opacity: 0.8;
 }
 
