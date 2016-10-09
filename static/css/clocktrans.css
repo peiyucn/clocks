@@ -30,8 +30,8 @@
 }
 
 .extrude1 {
-    transform: translateZ(3em);
-    -webkit-transform: translateZ(3em);
+    transform: translateZ(2em);
+    -webkit-transform: translateZ(2em);
     opacity: 0.5;
 }
 
