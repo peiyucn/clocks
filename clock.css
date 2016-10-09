@@ -11,6 +11,7 @@ body {
 
 .clock-title {
     font-size: 2rem;
+    display: block;
 }
 
 .clock-border {
