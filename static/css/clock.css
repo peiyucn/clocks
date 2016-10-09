@@ -18,7 +18,7 @@ body {
     display: inline-block;
     background-color: #ddd;
     padding: 2rem;
-    border-radius: 5%;
+    border-radius: 6%;
 }
 
 .clock {
@@ -28,8 +28,6 @@ body {
     position: relative;
     width: 25em;
     opacity: 1;
-    -webkit-perspective: 60em;
-    perspective: 60em;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: all 2.5s cubic-bezier(0.12, 1.03, 0.34, 1);

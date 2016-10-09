@@ -1,6 +1,8 @@
 .clock-trans {
     transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
     -webkit-transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
+    -webkit-perspective: 60em;
+    perspective: 60em;
 }
 
 .clock-bg-trans {
