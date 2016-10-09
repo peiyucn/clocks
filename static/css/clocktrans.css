@@ -1,8 +1,6 @@
 .clock-trans {
-    transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
-    -webkit-transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-25rem) translateY(8rem);
-    -webkit-perspective: 60em;
-    perspective: 60em;
+    transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-15rem) translateY(5rem);
+    -webkit-transform: scaleY(0.6) rotateY(60deg) rotateX(30deg) translateX(-15rem) translateY(5rem);
 }
 
 .clock-bg-trans {
@@ -28,8 +26,8 @@
 }
 
 .extrude1 {
-    transform: translateZ(2em);
-    -webkit-transform: translateZ(2em);
+    transform: translateZ(4em);
+    -webkit-transform: translateZ(4em);
     opacity: 0.5;
 }
 

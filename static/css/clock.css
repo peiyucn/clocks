@@ -28,6 +28,8 @@ body {
     position: relative;
     width: 25em;
     opacity: 1;
+    /*-webkit-perspective: 60em;*/
+    /*perspective: 60em;*/
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: all 2.5s cubic-bezier(0.12, 1.03, 0.34, 1);
@@ -46,8 +48,23 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 5%;
-    height: 5%;
+    -webkit-transform: translate(-50%, -50%);
+    width: 6%;
+    height: 6%;
+    z-index: 10;
+}
+
+.clock.simple:after {
+    background: #ff0000;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 2%;
+    height: 2%;
     z-index: 10;
 }
 
@@ -63,32 +80,38 @@ body {
 
 .hours {
     background: #000;
+    border-radius: 85%/10%;
+    width: 2%;
     height: 20%;
-    left: 48.75%;
-    position: absolute;
+    left: 49%;
     top: 30%;
+    position: absolute;
     transform-origin: 50% 100%;
-    width: 2.5%;
+    -webkit-transform-origin: 50% 100%;
 }
 
 .minutes {
     background: #000;
-    height: 40%;
-    left: 49%;
-    position: absolute;
-    top: 10%;
-    transform-origin: 50% 100%;
+    border-radius: 150%/10%;
     width: 2%;
+    height: 35%;
+    left: 49%;
+    top: 15%;
+    position: absolute;
+    transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
 }
 
 .seconds {
     background: #ff0000;
-    height: 45%;
-    left: 49.5%;
-    position: absolute;
-    top: 14%;
-    transform-origin: 50% 80%;
+    border-radius: 200%/10%;
     width: 1%;
+    height: 30%;
+    left: 49.5%;
+    top: 20%;
+    position: absolute;
+    transform-origin: 50% 80%;
+    -webkit-transform-origin: 50% 100%;
     z-index: 8;
 }
 
